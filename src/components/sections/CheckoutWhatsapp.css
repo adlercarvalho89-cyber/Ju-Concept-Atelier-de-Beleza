@@ -1,0 +1,162 @@
+/* src/components/sections/CheckoutWhatsapp.css */
+
+.checkout {
+  padding: 80px 20px;
+  background: var(--color-text);
+}
+
+.checkout__inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.checkout__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-pink);
+  margin: 0 0 8px;
+}
+
+.checkout__title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  color: var(--color-white);
+  margin: 0 0 32px;
+}
+
+.checkout__vazio {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.checkout__vazio-link {
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.checkout__lista {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkout__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-family: var(--font-body);
+  color: var(--color-white);
+}
+
+.checkout__item-nome {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.checkout__item-preco {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-pink);
+}
+
+.checkout__item-remover {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.checkout__item-remover:hover,
+.checkout__item-remover:focus-visible {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.checkout__item-remover:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+.checkout__resumo {
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 24px;
+}
+
+.checkout__resumo-linha {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.checkout__resumo-linha--total {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--color-white);
+  margin-bottom: 0;
+}
+
+.checkout__botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 56px;
+  border-radius: var(--radius-button);
+  background: #25d366; /* verde oficial do WhatsApp — reconhecimento instantâneo */
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: var(--transition-base);
+  margin-bottom: 12px;
+}
+
+.checkout__botao:hover,
+.checkout__botao:focus-visible {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.checkout__botao:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+.checkout__limpar {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.checkout__limpar:hover,
+.checkout__limpar:focus-visible {
+  color: var(--color-white);
+}
