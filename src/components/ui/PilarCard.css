@@ -1,0 +1,48 @@
+/* src/components/ui/PilarCard.css */
+
+.pilar-card {
+  background: var(--color-white);
+  border: 1px solid rgba(44, 37, 35, 0.08);
+  border-radius: 12px;
+  padding: 32px 28px;
+
+  opacity: 0;
+  transform: translateY(24px);
+  transition: var(--transition-base);
+}
+
+.pilar-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pilar-card__number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--color-gold);
+  margin-bottom: 12px;
+}
+
+.pilar-card__title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin: 0 0 12px;
+}
+
+.pilar-card__description {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(44, 37, 35, 0.75);
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pilar-card {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,49 @@
+/* src/components/sections/Pilares.css */
+
+.pilares {
+  padding: 80px 20px;
+}
+
+.pilares__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.pilares__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin: 0 0 8px;
+}
+
+.pilares__title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  color: var(--color-text);
+  margin: 0 0 48px;
+}
+
+/* Mobile-first: uma coluna só, cards empilhados */
+.pilares__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .pilares {
+    padding: 120px 40px;
+  }
+
+  .pilares__title {
+    font-size: 2.5rem;
+  }
+
+  .pilares__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
