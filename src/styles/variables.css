@@ -1,0 +1,28 @@
+:root {
+  /* ---------- Cor ---------- */
+  --color-bg: #fdfbfc;
+  --color-text: #2c2523;
+  --color-gold: #d4af37;
+  --color-pink: #e8c5c8;
+  --color-white: #ffffff;
+
+  /* ---------- Tipografia ---------- */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* ---------- Layout ---------- */
+  --max-width: 1200px;
+  --navbar-height: 72px;
+
+  /* ---------- Toque (mobile-first) ---------- */
+  --tap-target-min: 48px;
+  --radius-button: 8px;
+
+  /* ---------- Motion ---------- */
+  --ease-premium: cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-base: all 0.4s var(--ease-premium);
+
+  /* ---------- Glassmorphism (Navbar) ---------- */
+  --navbar-blur: 12px;
+  --navbar-bg-glass: rgba(253, 251, 251, 0.7);
+}
