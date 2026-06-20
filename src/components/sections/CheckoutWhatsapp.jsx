@@ -8,26 +8,8 @@
 
 import { useCart } from '../../context/CartContext';
 import { formatarPreco, formatarDuracao } from '../../data/servicosData';
+import { montarLinkWhatsapp } from '../../utils/whatsapp';
 import './CheckoutWhatsapp.css';
-
-// TODO(Juliana): trocar pelo número real do WhatsApp Business do
-// atelier. Formato internacional, só números: 55 + DDD + número.
-const WHATSAPP_NUMERO = '5521999999999';
-
-function montarMensagemWhatsapp(items, total, duration) {
-  const listaServicos = items
-    .map((item) => `• ${item.nome} — ${formatarPreco(item.preco)}`)
-    .join('\n');
-
-  return [
-    'Olá! Gostaria de agendar o seguinte combo no Ju Concept:',
-    '',
-    listaServicos,
-    '',
-    `Total: ${formatarPreco(total)}`,
-    `Tempo estimado: ${formatarDuracao(duration)}`,
-  ].join('\n');
-}
 
 function CheckoutWhatsapp() {
   const { items, total, duration, removeItem, clearCart } = useCart();
@@ -35,10 +17,7 @@ function CheckoutWhatsapp() {
 
   // Recalcula a cada render — é barato (poucos itens) e garante que
   // o link nunca fique desatualizado em relação ao carrinho.
-  const mensagem = montarMensagemWhatsapp(items, total, duration);
-  const linkWhatsapp = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(
-    mensagem
-  )}`;
+  const linkWhatsapp = montarLinkWhatsapp(items, total, duration);
 
   return (
     <section id="checkout" className="checkout">

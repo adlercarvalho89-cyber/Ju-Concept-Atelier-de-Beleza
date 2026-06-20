@@ -1,3 +1,5 @@
+/* src/components/layout/Navbar.css */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -101,6 +103,11 @@
   height: var(--tap-target-min);
   color: var(--color-text);
   text-decoration: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
 }
 
 .navbar__cart:focus-visible {
