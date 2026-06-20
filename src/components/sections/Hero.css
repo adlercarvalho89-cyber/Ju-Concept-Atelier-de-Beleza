@@ -1,0 +1,126 @@
+/* src/components/sections/Hero.css */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100svh; /* svh > vh no mobile: ignora o "pulo" da barra de endereço do Safari */
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Gradiente escurece a base da imagem pra garantir contraste do texto
+   branco por cima — sem precisar de uma foto especificamente escura. */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(44, 37, 35, 0.05) 0%,
+    rgba(44, 37, 35, 0.7) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 32px 20px 56px;
+  color: var(--color-white);
+
+  opacity: 0;
+  transform: translateY(24px);
+  transition: var(--transition-base);
+}
+
+.hero--loaded .hero__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-pink);
+  margin: 0 0 12px;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  max-width: 14ch;
+  margin: 0 0 16px;
+}
+
+.hero__subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 42ch;
+  margin: 0 0 28px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap-target-min);
+  padding: 0 28px;
+  border-radius: var(--radius-button);
+  background: var(--color-gold);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.hero__cta:hover,
+.hero__cta:focus-visible {
+  background: var(--color-pink);
+  transform: translateY(-2px);
+}
+
+.hero__cta:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+@media (min-width: 1024px) {
+  .hero__content {
+    padding: 48px 80px 96px;
+  }
+
+  .hero__title {
+    font-size: 3.5rem;
+    max-width: 18ch;
+  }
+
+  .hero__subtitle {
+    font-size: 1.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__content {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}

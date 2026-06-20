@@ -1,0 +1,40 @@
+/* src/styles/global.css */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+ * Toda section com id (#pilares, #servicos, #contato...) ganha esse
+ * respiro no topo. É o que evita que o link do menu role a página
+ * e deixe o início da seção escondido atrás da Navbar fixa —
+ * sem precisar de JS calculando offset manualmente.
+ */
+section[id] {
+  scroll-margin-top: var(--navbar-height);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
