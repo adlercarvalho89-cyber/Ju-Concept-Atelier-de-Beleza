@@ -1,9 +1,22 @@
+/**
+ * src/styles/variables.css
+ * --------------------------------------------------------------
+ * Design tokens do Ju Concept. Importe este arquivo UMA vez,
+ * no main.jsx, antes de qualquer outro CSS.
+ *
+ * Paleta: Opção 2 — Elegante Acolhedor (champagne + marrom café +
+ * terracota). Trocar de paleta no futuro = editar só este arquivo.
+ */
+
 :root {
   /* ---------- Cor ---------- */
-  --color-bg: #fdfbfc;
-  --color-text: #2c2523;
-  --color-gold: #d4af37;
-  --color-pink: #e8c5c8;
+  --color-bg: #f5ebe6;
+  --color-text: #3d2e28;
+  --color-text-rgb: 61, 46, 40; /* mesmos números de --color-text, sem rgba() em volta —
+                                    usado em rgba(var(--color-text-rgb), X) pra bordas/sombras
+                                    acompanharem a cor de texto automaticamente */
+  --color-accent: #a86f5c; /* terracota suave — reservado pra CTA, 10% da regra 60/30/10 */
+  --color-accent-soft: #bc8f8f; /* rosé seco — destaque decorativo secundário */
   --color-white: #ffffff;
 
   /* ---------- Tipografia ---------- */
@@ -24,5 +37,5 @@
 
   /* ---------- Glassmorphism (Navbar) ---------- */
   --navbar-blur: 12px;
-  --navbar-bg-glass: rgba(253, 251, 251, 0.7);
+  --navbar-bg-glass: rgba(245, 235, 230, 0.7);
 }

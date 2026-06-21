@@ -25,8 +25,8 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(44, 37, 35, 0.05) 0%,
-    rgba(44, 37, 35, 0.7) 100%
+    rgba(var(--color-text-rgb), 0.05) 0%,
+    rgba(var(--color-text-rgb), 0.7) 100%
   );
 }
 
@@ -52,7 +52,7 @@
   font-size: 0.8rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-pink);
+  color: var(--color-accent-soft);
   margin: 0 0 12px;
 }
 
@@ -82,7 +82,7 @@
   min-height: var(--tap-target-min);
   padding: 0 28px;
   border-radius: var(--radius-button);
-  background: var(--color-gold);
+  background: var(--color-accent);
   color: var(--color-text);
   font-family: var(--font-body);
   font-weight: 600;
@@ -93,7 +93,7 @@
 
 .hero__cta:hover,
 .hero__cta:focus-visible {
-  background: var(--color-pink);
+  background: var(--color-accent-soft);
   transform: translateY(-2px);
 }
 

@@ -24,7 +24,7 @@
 .footer__tagline {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: var(--color-pink);
+  color: var(--color-accent-soft);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0 0 20px;
@@ -41,7 +41,7 @@
 .footer__maps-link {
   display: inline-block;
   margin-top: 8px;
-  color: var(--color-gold);
+  color: var(--color-accent);
   font-weight: 600;
   text-decoration: none;
 }
@@ -52,7 +52,7 @@
 }
 
 .footer__maps-link:focus-visible {
-  outline: 2px solid var(--color-gold);
+  outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }
 
