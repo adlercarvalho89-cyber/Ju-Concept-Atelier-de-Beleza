@@ -160,3 +160,11 @@
 .checkout__limpar:focus-visible {
   color: var(--color-white);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .checkout__botao,
+  .checkout__item-remover,
+  .checkout__limpar {
+    transition: none;
+  }
+}

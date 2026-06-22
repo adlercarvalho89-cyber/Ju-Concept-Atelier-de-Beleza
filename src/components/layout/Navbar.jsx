@@ -11,8 +11,8 @@ import CartPanel from '../ui/CartPanel';
 import './Navbar.css';
 
 const NAV_LINKS = [
+  { href: '#profissional', label: 'Sobre' },
   { href: '#pilares', label: 'Cuidados' },
-  { href: '#transformacoes', label: 'Transformações' },
   { href: '#servicos', label: 'Serviços' },
   { href: '#contato', label: 'Contato' },
 ];

@@ -101,3 +101,10 @@
     width: 100%;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-card__botao {
+    transition: none;
+  }
+}

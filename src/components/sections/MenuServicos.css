@@ -77,3 +77,9 @@
     gap: 20px;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-servicos__tab {
+    transition: none;
+  }
+}
