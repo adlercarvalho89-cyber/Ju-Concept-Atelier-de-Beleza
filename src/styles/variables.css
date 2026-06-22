@@ -15,8 +15,10 @@
   --color-text-rgb: 61, 46, 40; /* mesmos números de --color-text, sem rgba() em volta —
                                     usado em rgba(var(--color-text-rgb), X) pra bordas/sombras
                                     acompanharem a cor de texto automaticamente */
-  --color-accent: #a86f5c; /* terracota suave — reservado pra CTA, 10% da regra 60/30/10 */
-  --color-accent-soft: #bc8f8f; /* rosé seco — destaque decorativo secundário */
+  --color-accent: #a86f5c;       /* terracota suave — reservado pra CTA, 10% da regra 60/30/10 */
+  --color-accent-soft: #bc8f8f;  /* rosé seco — destaque decorativo em fundos CLAROS */
+  --color-accent-light: #f0d5ce; /* champagne-rosé claro — textos sobre fundos ESCUROS
+                                    (Hero overlay, Checkout dark, Footer dark) */
   --color-white: #ffffff;
 
   /* ---------- Tipografia ---------- */

@@ -24,7 +24,7 @@
 .footer__tagline {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: var(--color-accent-soft);
+  color: var(--color-accent-light);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0 0 20px;
