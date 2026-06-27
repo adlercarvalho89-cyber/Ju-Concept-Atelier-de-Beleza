@@ -1,5 +1,3 @@
-/* src/components/ui/PilarCard.css */
-
 .pilar-card {
   background: var(--color-white);
   border: 1px solid rgba(var(--color-text-rgb), 0.08);
@@ -36,7 +34,34 @@
   font-size: 0.95rem;
   line-height: 1.6;
   color: rgba(var(--color-text-rgb), 0.75);
-  margin: 0;
+  margin: 0 0 20px; 
+}
+
+.pilar-card__ver-fotos {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-accent);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.pilar-card__ver-fotos:hover {
+  color: var(--color-text);
+}
+
+.pilar-card__ver-fotos:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
